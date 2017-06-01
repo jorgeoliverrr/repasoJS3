@@ -50,7 +50,6 @@ $(function(){
     })
 })
 
-
 // 03.- Crear un input, un botón y otro input. El usuario debe ingresar un valor númerico en el primero, 
 // y al presionar el botón en el segundo input debe aparecer de forma automática el valor más el IVA (incremento del 19%)
 
@@ -80,7 +79,6 @@ $(function(){
 // --> 04.v2.- Cambiar el código anterior para que el texto del tercer input se modifique automáticamente cada vez 
 // que alguien escriba en los inputs sin necesidad de presionar algún botón.
 
-
 $('#e42').ready(function(){
     $('#e42').keyup(function(){
         var texto423 =  $('#texto421').val() + $('#texto422').val()
@@ -88,18 +86,23 @@ $('#e42').ready(function(){
     });
 });
 
-
-
-
 // 05.- Crear dos inputs y un botón, el usuario debe ingresar un ancho en un input y un alto en el segundo, 
 // al presionar el botón se debe dibujar un cuadrado (para dibujarlo se debe utilizar CSS)
 
-
-
+ $(function(){
+    $('#ej5').on('submit', function(e){
+        e.preventDefault()
+        var alto5= $('#alto5').val()
+        var ancho5 = $('#ancho5').val()
+        $('#e5').css({width: $(alto5), height: $(ancho5)})
+    })
+})
 
 
 // 06.- Crear una página que tiene 2 columnas, en la columna izquierda se muestran productos donde cada producto tiene nombre, 
 // precio y un link agregar, cada vez que se presione alguno de los links se debe agregar el nombre del producto a la columna derecha.
+
+
 
 // 07.- Crear una calculadora, para eso se debe generar un botón para cada número, un botón para suma, resta, multiplicación y división 
 // y otro para generar el resultado, para realizar el ejercicio se recomienda ir guardando y concatenando cada texto en un input 
