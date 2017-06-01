@@ -65,13 +65,38 @@ $(function(){
     })
 })
 
-// 04.v1.- Crear tres inpus y un botón, los dos primeros inputs son para que el usuario ingrese su nombre y su apellido, 
+// 04.v1.- Crear tres inpus y un botón, los dos primeros inputs son para que el usuario ingrese su nombre y su apellido,
 // al presionar el boton el texto del tercer input debe ser remplazado por la concatenación de los dos primeros.
+
+ $(function(){
+    $('#e41').on('submit', function(e){
+        e.preventDefault()
+        var texto =  $('#texto411').val() + $('#texto412').val()
+        $('#texto413').val(texto)
+        console.log(texto);
+    })
+})
+
 // --> 04.v2.- Cambiar el código anterior para que el texto del tercer input se modifique automáticamente cada vez 
 // que alguien escriba en los inputs sin necesidad de presionar algún botón.
 
+
+$('#e42').ready(function(){
+    $('#e42').keyup(function(){
+        var texto423 =  $('#texto421').val() + $('#texto422').val()
+        $('#texto423').val(texto423)
+    });
+});
+
+
+
+
 // 05.- Crear dos inputs y un botón, el usuario debe ingresar un ancho en un input y un alto en el segundo, 
 // al presionar el botón se debe dibujar un cuadrado (para dibujarlo se debe utilizar CSS)
+
+
+
+
 
 // 06.- Crear una página que tiene 2 columnas, en la columna izquierda se muestran productos donde cada producto tiene nombre, 
 // precio y un link agregar, cada vez que se presione alguno de los links se debe agregar el nombre del producto a la columna derecha.
